@@ -1,148 +1,153 @@
-/* GERAL */
+/* GLOBAL */
 * {
-    padding: 0;
     margin: 0;
-    font-family: Georgia;
+    padding: 0;
+    font-family: Arial;
 }
 
-ul {
-    list-style: none;
+  article > * {
+    margin-bottom: 15px;
 }
 
-a {
-    text-decoration: none;
-    color: #444;
-    transition: 0.4s;
-}
-
-a:hover {
-    color: #37a1f7;
-}
-
-/* Navbar */
-#navbar {
-    padding: 1.5rem 2.5rem;
-    border-bottom: 2px solid #ddd;
-}
-
-#navbar-inner {
+body {
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
+
+/* NAVEGACAO
+  ------------------ */
+header {
+    height: 80px;
+    overflow: hidden;
     align-items: center;
-    justify-content: space-between; /* Gracas a isso, não preciso por float left para 1 e rigth para outro*/
-    max-width: 1200px; 
-    margin: 0 auto;
+    border-bottom: 1px solid rgb(129, 129, 129);
 }
 
-#nav-links {
-    display: flex;
-    gap: 1rem;
+header h1 {
+    float: left;
+    margin: 20px;
+    padding-left: 70px;
 }
 
-/* Conteudo principal */
-.container {
-    display: flex; /* Com isso, consegui deixar  o main ao lado do aside*/
-    gap: 3rem;
-    padding: 2rem 2.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+header ul {
+    float: right;
+    list-style: none;
+    margin: 30px;
+    padding-right: 30px;
 }
 
-#posts-container {
-    flex: 3 1 0;
+header li {
+    display: inline;
+    margin-left: 10px;
 }
 
-#post {
-    margin-bottom: 2.5rem;
-}
-
-.post img {
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-.title,
-.description,
-.author {
-    margin-bottom: 1rem;
-}
-
-.title {
-    font-size: 2rem;
-}
-
-.author {
+header li a {
+    text-decoration: none;
     color: #333;
-    font-weight: bold;
 }
 
-/* Barra Lateral */
-#sidebar {
-    flex: 1 1 0;
-}
+/* MAIN 
+------------------------------*/
 
-#search-bar,
-#categorias,
-#tags {
-    padding: 1.5rem;
-    border: 1px solid #ddd;
-    margin-bottom: 1rem;
-}
-
-#search-bar h4,
-#categorias h4,
-#tags h4 {
-    margin-bottom: 1.5rem;
-    font-size: 1.6rem;
-}
-
-#search-bar form {
+main {
+    flex: 1;
     display: flex;
+    margin: auto 30px;
 }
 
-#search-bar input {
-    padding: .5rem 1rem;
-    border: 1px solid #ddd;
+main img{
+    width: 100%;
 }
 
-#search-bar input[type="submit"] {
-    cursor: pointer;
-    background-color: #37a1f7;
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-desc {
+    margin-bottom: 20px;
+}
+section {
+    flex: 1;
+    padding: 30px;
+}
+
+section a {
+    color: #424242;
+    text-decoration: none;
+}
+
+article {
+    padding: 20px;
+}
+/* ASIDE
+----------------------*/
+aside {
+    width: 20%;
+    padding: 20px;
+    margin: 45px 30px 0 0;
+}
+
+.aside-container{
+    padding: 20px;
+}
+.search {
+    padding: 3px;
+}
+
+.busca {
+    border: 1px solid rgb(129, 129, 129);
+    margin-bottom: 30px;
+}
+
+aside h1 {
+    margin: 5px 0 20px 0;
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+}
+
+aside input {
+    padding: 10px;
+}
+
+aside button {
+    padding: 10px;
+    background-color: #0000FF;
     color: #fff;
     border: none;
+    cursor: pointer;
 }
 
-#categorias li {
-    margin-bottom: 1rem;
+#input-container a{
+    list-style: none;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
-#tags-container {
-    display: flex;
-    flex-wrap: wrap; /* As tags quebram em linha */
-    gap: 0.5rem;
+.tags-container p{
+    display: inline-block;
+    margin: 5px;
+    background-color: #D8D8D8;
+    padding: 5px;
 }
 
-#tags-container a {
-    background-color: #ddd;
-    padding: 0.5rem 0.7rem;
-    border-radius: 0.3rem;
-} 
+footer{
+    border-top: 1px solid rgb(129, 129, 129);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 
-/* Footer */
-#footer {
-    border-top: 2px solid #ddd;
-    padding: 3rem;
+}
+
+footer h1, p {
     text-align: center;
-}
-
-#footer h2,
-#footer p {
-    margin-bottom: 1rem;
-}
-
-/* Responsive */
-
-@media(max-width: 450px) {
-    .container {
-        flex-wrap: wrap;
-    }
+    margin: 10px;
 }
